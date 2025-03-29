@@ -1,0 +1,24 @@
+# Test 2025-03-29 at 04:35:16
+
+name: Test
+run-name: quickSortFailure
+
+on:
+  push:
+    paths:
+      - '**/main.yml'
+jobs:
+
+  test:
+    permissions: write-all
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: 'main'
+
+    - name: Run
+      run: |
+        perl quickSortEasy.pl
+        perl quickSort.pl
