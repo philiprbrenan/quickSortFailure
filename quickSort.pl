@@ -31,10 +31,6 @@ sub quickSort                                                                   
     my ($a, $b) = ($A, $B);                                                     # The range to squeeze
     my $p = int(($a + $b) / 2);                                                 # Select pivot
 
-    my $out = 0;                                                                # Check whether the range is sorted yet
-    $out += $$array[$_-1] > $$array[$_] ? 1 : 0 for $A+1..$B;                   # The number of out of order elements in the range
-    next unless $out;                                                           # Return immediately if the range is already sorted
-
     for my $i($A..$B)                                                           # Squeeze at most this number of times
      {++$traverses;
       ++$a, next if $a < $p and $$array[$a] <= $$array[$p];                     # Move up over lower element
@@ -71,11 +67,12 @@ test ((reverse 1..1e5), 1..1e5);                                                
 test ((reverse 1..2e5), 1..2e5);                                                # Double the last should result in a doubling of runtime not a quadrupling
 test ((1..1000)x100);                                                           # Fails in easy version
 
-# Size=      20 time= 0.0001 depth= 1 swaps=     106  traverses=     103
-# Size=       6 time= 0.0000 depth= 1 swaps=      11  traverses=      10
-# Size=      14 time= 0.0000 depth= 1 swaps=      26  traverses=      25
-# Size=     100 time= 0.0004 depth= 4 swaps=     539  traverses=     541
-# Size=      34 time= 0.0001 depth= 3 swaps=     130  traverses=     123
-# Size=    2003 time= 0.0023 depth= 0 swaps=    4003  traverses=    2003
-# Size=  200000 time= 2.2904 depth=25 swaps= 3097725  traverses= 4017500
-# Size=  400000 time= 4.6276 depth=24 swaps= 5855525  traverses= 7901656
+# Size=      20 time= 0.0001 depth= 2 swaps=      68  traverses=      75
+# Size=       6 time= 0.0000 depth= 1 swaps=      14  traverses=      11
+# Size=      14 time= 0.0000 depth= 1 swaps=      57  traverses=      53
+# Size=     100 time= 0.0004 depth= 3 swaps=     716  traverses=     779
+# Size=      34 time= 0.0001 depth= 2 swaps=     183  traverses=     200
+# Size=    2003 time= 0.9867 depth= 0 swaps= 2006004  traverses= 2005002
+# Size=  200000 time= 1.7364 depth=25 swaps= 2889634  traverses= 3848050
+# Size=  400000 time= 3.4807 depth=23 swaps= 5729611  traverses= 7856994
+# Size=  100000 time= 2.9879 depth=13 swaps= 5762602  traverses= 6085930
