@@ -4,8 +4,8 @@
 
 # Quicksort Point of Failure
 
-A demonstration of how the easy [version](https://en.wikipedia.org/wiki/Software_versioning) of [Quick Sort](https://github.com/philiprbrenan/QuickSort), the one we so often
-encounter in interviews, can [fail](https://1lib.eu/book/2468851/544b50) and one way to ameliorate this failure.
+A demonstration of how the easily written [version](https://en.wikipedia.org/wiki/Software_versioning) of [Quick Sort](https://github.com/philiprbrenan/QuickSort), the one we so
+often encounter in interviews, can [fail](https://1lib.eu/book/2468851/544b50) and one way to ameliorate this failure.
 
 In ``quickSortEasy.pl`` we get a stack overflow when trying to [sort](https://en.wikipedia.org/wiki/Sorting) ``(1..1000)
 x 10``.  At the same time, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory) as it creates
