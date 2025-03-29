@@ -9,13 +9,13 @@ encounter in interviews, can [fail](https://1lib.eu/book/2468851/544b50) and one
 
 In ``quickSortEasy.pl`` we get a stack overflow when trying to [sort](https://en.wikipedia.org/wiki/Sorting) ``(1..1000)
 x 10``.  At the same time, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory) as it creates
-copies of parts if to be [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted.
+copies of the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted.
 
 ``quickSort.pl`` ameliorates this situation by not using recursion and by
 randomizing the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place.
 
-Both versions have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on recusrion via a
-one liner:
+Both versions have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on recursion via a
+one-liner:
 
 ```
 sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort
