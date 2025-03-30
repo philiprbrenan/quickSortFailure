@@ -9,7 +9,7 @@ often encounter in interviews, can [fail](https://1lib.eu/book/2468851/544b50) a
 
 In ``quickSortEasy.pl`` we get a stack overflow when trying to [sort](https://en.wikipedia.org/wiki/Sorting) ``(1..1000)
 x 10``.  At the same time, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory) as it creates
-copies of the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted.
+copies of the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted. The same problem occurs int the corresponding [Python](https://www.python.org/) [version](https://en.wikipedia.org/wiki/Software_versioning) as shown in ``quickSortEasy.py``.
 
 ``quickSort.pl`` ameliorates this situation by not using recursion and by
 randomizing the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place.
