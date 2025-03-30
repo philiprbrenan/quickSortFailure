@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #-------------------------------------------------------------------------------
 # Quick sort
-# Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2024
+# Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2025
 #-------------------------------------------------------------------------------
 use v5.38;
 use Test::More qw(no_plan);
