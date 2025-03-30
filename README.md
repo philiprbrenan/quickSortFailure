@@ -13,7 +13,7 @@ sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_)
 
 However, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory), creating three additional [arrays](https://en.wikipedia.org/wiki/Dynamic_array) for each phase of the [sort](https://en.wikipedia.org/wiki/Sorting). This negates one of the major advantages of [Quick Sort](https://github.com/philiprbrenan/QuickSort), namely the fact that it can be implemented as an in-place [sort](https://en.wikipedia.org/wiki/Sorting). 
 ## Crashing the easy [version](https://en.wikipedia.org/wiki/Software_versioning) 
-It is easy to get this [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning) to crash: try sorting
+It is easy to get ``quickSortEasy.pl`` to crash: try sorting
 ``(1..1000) x 10`` and observe the resulting stack overflow.
 
 The same problems occur in the corresponding Python [version](https://en.wikipedia.org/wiki/Software_versioning), as shown in
