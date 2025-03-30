@@ -56,19 +56,24 @@ jobs:
         ref: 'main'
 
     - name: perl quickSortEasy.pl
-      if: \${{ always() }}
+      continue-on-error: true
       run: |
         perl quickSortEasy.pl
 
     - name: python3 quickSortEasy.py
-      if: \${{ always() }}
+      continue-on-error: true
       run: |
         python3 quickSortEasy.py
 
     - name: perl quickSort.pl
-      if: \${{ always() }}
+      continue-on-error: true
       run: |
         perl quickSort.pl
+
+    - name: pass
+      continue-on-error: true
+      run: |
+        echo Finished
 END
 
   my $f = writeFileUsingSavedToken $user, $repo, $wf, $y;                       # Upload workflow
