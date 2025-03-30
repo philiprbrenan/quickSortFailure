@@ -22,20 +22,19 @@ The same problems occur in the corresponding Python [version](https://en.wikiped
 ## Overcoming this particular failure
 
 This failure is ameliorated in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl``
-which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place without a stack
-overflow occurring.
+which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place without a
+stack overflow occurring.
 
 # Automated formatting
 
-Both versions of the algorithm have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on
-the brevity of recursion:
+Both short and long versions of the algorithm have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on the brevity of recursion:
 
 ```
 sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort
 
 ```
 
-While the larger [version](https://en.wikipedia.org/wiki/Software_versioning) neatly partitions ranges like this:
+While the long [version](https://en.wikipedia.org/wiki/Software_versioning) neatly partitions ranges like this:
 
 ```
     for my $i($A..$B)                                                           # Squeeze at most this number of times
