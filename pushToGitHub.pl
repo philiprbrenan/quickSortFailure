@@ -69,11 +69,6 @@ jobs:
       continue-on-error: true
       run: |
         perl quickSort.pl
-
-    - name: pass
-      continue-on-error: true
-      run: |
-        echo Finished
 END
 
   my $f = writeFileUsingSavedToken $user, $repo, $wf, $y;                       # Upload workflow
