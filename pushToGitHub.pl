@@ -55,9 +55,16 @@ jobs:
       with:
         ref: 'main'
 
-    - name: Run
+    - name: perl quickSortEasy.pl
       run: |
         perl quickSortEasy.pl
+
+    - name: python3 quickSortEasy.py
+      run: |
+        python3 quickSortEasy.py
+
+    - name: perl quickSort.pl
+      run: |
         perl quickSort.pl
 END
 
