@@ -5,7 +5,7 @@
 # Quicksort Point of Failure
 
 The ability to regurgitate the [Quick Sort](https://github.com/philiprbrenan/QuickSort) algorithm is often used as a [test](https://en.wikipedia.org/wiki/Software_testing) in [job](https://en.wikipedia.org/wiki/Job_(computing)) interviews. It is easy to [write](https://en.wikipedia.org/wiki/Write_(system_call)) a short, [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning) of this
-algorithm that works well on small [test](https://en.wikipedia.org/wiki/Software_testing) cases:
+algorithm ``quickSortEasy.pl`` that works well on small [test](https://en.wikipedia.org/wiki/Software_testing) cases:
 
 ```
 sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort
@@ -23,8 +23,8 @@ repository.
 
 ## Overcoming this particular failure
 
-This particular point of failure is avoided in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl`` which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in
-place without a stack overflow occurring.
+This particular point of failure is avoided in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl`` which randomizes the input [array](https://en.wikipedia.org/wiki/Dynamic_array) before sorting it in place
+without a stack overflow occurring.
 
 # Automated formatting
 
