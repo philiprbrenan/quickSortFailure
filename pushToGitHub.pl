@@ -16,7 +16,7 @@ my $home    = q(/home/phil/perl/z/quickSort/);                                  
 my $user    = q(philiprbrenan);                                                 # User
 my $repo    = q(quickSortFailure);                                              # Repo
 my $wf      = q(.github/workflows/main.yml);                                    # Work flow on Ubuntu
-my @ext     = qw(.pl .md);                                                      # Extensions of files to upload to github
+my @ext     = qw(.md .pl .py);                                                  # Extensions of files to upload to github
 
 push my @files, searchDirectoryTreesForMatchingFiles($home, @ext);              # Files to upload
 
