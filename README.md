@@ -11,30 +11,32 @@ algorithm that works well on small [test](https://en.wikipedia.org/wiki/Software
 sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort
 ```
 
-However, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory), creating three additional [arrays](https://en.wikipedia.org/wiki/Dynamic_array) for each phase of the [sort](https://en.wikipedia.org/wiki/Sorting). This negates one of the major advantages of [Quick Sort](https://github.com/philiprbrenan/QuickSort), namely the fact that it can be implemented as an in-place [sort](https://en.wikipedia.org/wiki/Sorting). 
+However, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory), creating three additional [arrays](https://en.wikipedia.org/wiki/Dynamic_array) for each phase of the [sort](https://en.wikipedia.org/wiki/Sorting). This negates one of the major advantages of [Quick Sort](https://github.com/philiprbrenan/QuickSort), namely the fact that it can be implemented as an in-place [sort](https://en.wikipedia.org/wiki/Sorting) without requiring extra [memory](https://en.wikipedia.org/wiki/Computer_memory). 
 ## Crashing the easy [version](https://en.wikipedia.org/wiki/Software_versioning) 
-It is easy to get ``quickSortEasy.pl`` to crash: try sorting
-``(1..1000) x 10`` and observe the resulting stack overflow.
+It is easy to get ``quickSortEasy.pl`` to crash: try sorting ``(1..1000) x 10``
+and observe the resulting stack overflow as shown in the action associated with
+this repository.
 
-The same problems occur in the corresponding Python [version](https://en.wikipedia.org/wiki/Software_versioning), as shown in
-``quickSortEasy.py``.
+The same problems occur in the corresponding Python [version](https://en.wikipedia.org/wiki/Software_versioning), as shown by the
+execution of ``quickSortEasy.py`` in the action associated with this
+repository.
 
 ## Overcoming this particular failure
 
-This failure is ameliorated in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl``
+This point of failure is avoided in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl``
 which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place without a
 stack overflow occurring.
 
 # Automated formatting
 
-Both short and long versions of the algorithm have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on the brevity of recursion:
+Both short and long versions of the algorithm have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on the relentless brevity of recursion:
 
 ```
 sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort
 
 ```
 
-While the long [version](https://en.wikipedia.org/wiki/Software_versioning) neatly partitions ranges like this:
+While the long [version](https://en.wikipedia.org/wiki/Software_versioning) neatly partitions each range like this:
 
 ```
     for my $i($A..$B)                                                           # Squeeze at most this number of times
