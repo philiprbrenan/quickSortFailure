@@ -23,9 +23,8 @@ repository.
 
 ## Overcoming this particular failure
 
-This point of failure is avoided in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl``
-which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place without a
-stack overflow occurring.
+This particular point of failure is avoided in the non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl`` which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in
+place without a stack overflow occurring.
 
 # Automated formatting
 
