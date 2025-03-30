@@ -1,4 +1,4 @@
-# Test 2025-03-30 at 03:12:23
+# Test 2025-03-30 at 03:16:21
 
 name: Test
 run-name: quickSortFailure
@@ -19,13 +19,16 @@ jobs:
         ref: 'main'
 
     - name: perl quickSortEasy.pl
+      if: ${{ always() }}
       run: |
         perl quickSortEasy.pl
 
     - name: python3 quickSortEasy.py
+      if: ${{ always() }}
       run: |
         python3 quickSortEasy.py
 
     - name: perl quickSort.pl
+      if: ${{ always() }}
       run: |
         perl quickSort.pl
