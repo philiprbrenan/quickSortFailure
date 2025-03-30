@@ -66,7 +66,7 @@ jobs:
         python3 quickSortEasy.py
 
     - name: perl quickSort.pl
-      continue-on-error: true
+      if: ${{ always() }}
       run: |
         perl quickSort.pl
 END
