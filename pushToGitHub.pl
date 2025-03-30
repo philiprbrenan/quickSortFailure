@@ -56,14 +56,17 @@ jobs:
         ref: 'main'
 
     - name: perl quickSortEasy.pl
+      if: ${{ always() }}
       run: |
         perl quickSortEasy.pl
 
     - name: python3 quickSortEasy.py
+      if: ${{ always() }}
       run: |
         python3 quickSortEasy.py
 
     - name: perl quickSort.pl
+      if: ${{ always() }}
       run: |
         perl quickSort.pl
 END
