@@ -66,7 +66,7 @@ jobs:
         python3 quickSortEasy.py
 
     - name: perl quickSort.pl
-      if: ${{ always() }}
+      if: \${{ always() }}
       run: |
         perl quickSort.pl
 END
