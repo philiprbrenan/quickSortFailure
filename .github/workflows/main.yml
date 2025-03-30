@@ -1,4 +1,4 @@
-# Test 2025-03-30 at 03:21:20
+# Test 2025-03-30 at 03:22:34
 
 name: Test
 run-name: quickSortFailure
@@ -32,8 +32,3 @@ jobs:
       continue-on-error: true
       run: |
         perl quickSort.pl
-
-    - name: pass
-      continue-on-error: true
-      run: |
-        echo Finished
