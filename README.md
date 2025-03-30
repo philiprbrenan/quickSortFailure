@@ -4,15 +4,23 @@
 
 # Quicksort Point of Failure
 
-A demonstration of how the easily written [version](https://en.wikipedia.org/wiki/Software_versioning) of [Quick Sort](https://github.com/philiprbrenan/QuickSort), the one we so
-often encounter in interviews, can [fail](https://1lib.eu/book/2468851/544b50) and one way to ameliorate this failure.
+The ability to regurgitate the [Quick Sort](https://github.com/philiprbrenan/QuickSort) algorithm is often used as a [test](https://en.wikipedia.org/wiki/Software_testing) in [job](https://en.wikipedia.org/wiki/Job_(computing)) interviews. It is easy to [write](https://en.wikipedia.org/wiki/Write_(system_call)) a short, [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning) of this
+algorithm that works well on small [test](https://en.wikipedia.org/wiki/Software_testing) cases:
 
-In ``quickSortEasy.pl`` we get a stack overflow when trying to [sort](https://en.wikipedia.org/wiki/Sorting) ``(1..1000)
-x 10``.  At the same time, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory) as it creates
-copies of the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted. The same problem occurs int the corresponding [Python](https://www.python.org/) [version](https://en.wikipedia.org/wiki/Software_versioning) as shown in ``quickSortEasy.py``.
+```
+sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort
+```
 
-``quickSort.pl`` ameliorates this situation by not using recursion and by
-randomizing the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place.
+However, this [version](https://en.wikipedia.org/wiki/Software_versioning) uses a lot of [memory](https://en.wikipedia.org/wiki/Computer_memory), creating three additional [arrays](https://en.wikipedia.org/wiki/Dynamic_array) for each phase of the [sort](https://en.wikipedia.org/wiki/Sorting). This negates one of the major advantages of [Quick Sort](https://github.com/philiprbrenan/QuickSort), namely the fact that it can be implemented as an in-place [sort](https://en.wikipedia.org/wiki/Sorting). 
+It is quite easy to get this [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning) to crash: try sorting
+``(1..1000) x 10`` and observe the resulting stack overflow.
+
+The same problems occur in the corresponding Python [version](https://en.wikipedia.org/wiki/Software_versioning), as shown in
+``quickSortEasy.py``.
+
+This failure is ameliorated in this non [recursive](https://en.wikipedia.org/wiki/Recursion) [version](https://en.wikipedia.org/wiki/Software_versioning): ``quickSort.pl``
+which randomizes the [array](https://en.wikipedia.org/wiki/Dynamic_array) to be sorted before sorting it in place with a stack
+overflow occurring.
 
 Both versions have inner beauty.  The easy [version](https://en.wikipedia.org/wiki/Software_versioning) relies on recursion via a
 one-liner:
