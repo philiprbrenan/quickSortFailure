@@ -13,4 +13,4 @@ is_deeply [Q(2, (1)x4)],        [(1)x4, 2];
 is_deeply [Q(qw(6 3 1 4 2 5))], [1..6];
 is_deeply [Q(        1..1000)], [1..1000];
 is_deeply [Q(reverse 1..1000)], [1..1000];
-# Q((1..1000)x10);                                                              # Deep recursion
+ Q((1..1000)x10);                                                               # Deep recursion
