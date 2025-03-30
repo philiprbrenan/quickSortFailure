@@ -1,4 +1,4 @@
-# Test 2025-03-30 at 03:22:34
+# Test 2025-03-30 at 03:28:32
 
 name: Test
 run-name: quickSortFailure
@@ -29,6 +29,6 @@ jobs:
         python3 quickSortEasy.py
 
     - name: perl quickSort.pl
-      continue-on-error: true
+      if: ${{ always() }}
       run: |
         perl quickSort.pl
