@@ -4,9 +4,8 @@ name: Test
 run-name: quickSortFailure
 
 on:
-  push:
-    paths:
-      - '**/main.yml'
+  push
+
 jobs:
 
   test:
