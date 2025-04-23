@@ -8,5 +8,6 @@ export LANG=en_US.UTF-8
 git config --global --add safe.directory /workspace
 echo '--- git status ---'
 git status
-
+pwd
+whoami
 perl quickSort.pl 2>zzz.txt
