@@ -10,4 +10,6 @@ echo '--- git status ---'
 git status
 pwd
 whoami
+
+perl quickSort.pl
 perl quickSort.pl 2>zzz.txt
