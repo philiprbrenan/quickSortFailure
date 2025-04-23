@@ -3,7 +3,7 @@
 # Quick sort
 # Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2025
 #-------------------------------------------------------------------------------
-use v5.38;
+use v5.34;
 use Test::More qw(no_plan);
 
 sub Q{@_<2?@_:(Q(grep$_<$_[@_/2],@_),(grep$_==$_[@_/2],@_),Q(grep$_>$_[@_/2],@_))}  # Quicksort

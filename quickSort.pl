@@ -3,7 +3,7 @@
 # In place quick sort of array with duplicate elements using no extra arrays
 # Philip R Brenan at gmail dot com, Appa Apps Ltd Inc., 2025
 #-------------------------------------------------------------------------------
-use v5.38;
+use v5.34;
 use warnings FATAL => qw(all);
 use strict;
 use Time::HiRes qw(time);
