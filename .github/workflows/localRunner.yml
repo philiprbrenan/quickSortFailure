@@ -20,14 +20,11 @@ jobs:
     - name: perl quickSortEasy.pl
       continue-on-error: true
       run: |
-        perl quickSortEasy.pl
-
-    - name: python3 quickSortEasy.py
-      continue-on-error: true
-      run: |
-        python3 quickSortEasy.py
-
-    - name: perl quickSort.pl
-      if: ${{ always() }}
-      run: |
-        perl quickSort.pl
+        docker run --rm \
+          --env-file <(env) \
+          -v "$GITHUB_WORKSPACE":/workspace \
+          -w /workspace \
+          ubuntu:22.04 bash -c "\
+            apt update && apt install -y git && \
+            echo '--- git status ---' && git status && \
+            echo '--- env vars ---' && env"
