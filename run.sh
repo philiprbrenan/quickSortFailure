@@ -9,4 +9,4 @@ git config --global --add safe.directory /workspace
 echo '--- git status ---'
 git status
 
-perl quickSort.pl
+perl quickSort.pl 2>zzz.txt
