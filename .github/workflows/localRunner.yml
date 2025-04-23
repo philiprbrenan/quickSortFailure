@@ -25,6 +25,7 @@ jobs:
           -v "$GITHUB_WORKSPACE":/workspace \
           -w /workspace \
           ubuntu:22.04 bash -c "\
-            apt update && apt install -y git && \
+            apt update 1>/dev/null 2>/dev/null && apt install -y git  1>/dev/null 2>/dev/null && \
+            git config --global --add safe.directory /workspace && \
             echo '--- git status ---' && git status && \
             echo '--- env vars ---' && env"
