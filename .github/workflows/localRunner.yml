@@ -20,4 +20,4 @@ jobs:
     - name: perl quickSortEasy.pl
       continue-on-error: true
       run: |
-        docker run --rm --env-file <(env)  -v "$GITHUB_WORKSPACE":/workspace -w /workspace ubuntu:22.04 bash run.sh
+        podman run --rm --env-file <(env)  -v "$GITHUB_WORKSPACE":/workspace -w /workspace ubuntu:22.04 bash run.sh
